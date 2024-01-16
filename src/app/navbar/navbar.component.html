@@ -1,0 +1,36 @@
+<div class="l-header progress-container">
+    <div class="progress-bar" [style.width]="scrollPercentage + '%'"></div>
+</div>
+<div class="l-header" [ngClass]="{'hide-nav': hideNavbar}">
+    <nav class="nav bd-grid">
+        <div>
+            <a href="#" class="nav__logo">Aadarsh</a>
+        </div>
+
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#home" (click)="setActive('home')" class="nav__link"
+                        [class.active-link]="activeLink === 'home'">Home</a></li>
+                <li class="nav__item"><a href="#about" (click)="setActive('about')" class="nav__link"
+                        [class.active-link]="activeLink === 'about'">About</a></li>
+                <li class="nav__item"><a href="#work" (click)="setActive('work')" class="nav__link"
+                        [class.active-link]="activeLink === 'work'">Work</a></li>
+                <li class="nav__item"><a href="#skills" (click)="setActive('skills')" class="nav__link"
+                        [class.active-link]="activeLink === 'skills'">Skills</a></li>
+                <li class="nav__item"><a href="#contact" (click)="setActive('contact')" class="nav__link"
+                        [class.active-link]="activeLink === 'contact'">Contact</a></li>
+                <!-- <li class="nav__item">
+                    <a >
+                        <i (click)="toggleDarkMode()" [ngClass]="isDarkMode ? 'pi pi-moon' : 'pi pi-sun'"></i>
+                    </a>
+                </li> -->
+
+            </ul>
+        </div>
+
+
+        <div class="nav__toggle" id="nav-toggle">
+            <i class='pi pi-align-justify'></i>
+        </div>
+    </nav>
+</div>

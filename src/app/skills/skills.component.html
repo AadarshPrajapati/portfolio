@@ -1,0 +1,35 @@
+<section class="skills section" id="skills">
+    <h2 class="section-title">Skills</h2>
+
+    <div class="skills__container bd-grid">
+        <div>
+            <p-carousel [value]="images" [circular]="true" [showIndicators]="false" [showNavigators]="false" [autoplayInterval]="2000">
+                <ng-template let-image pTemplate="item">
+                    <img [src]="image" class="skills__img" alt="">
+                </ng-template>
+            </p-carousel>            
+        </div>
+        <div>
+            <h4>Languages</h4>
+            <div>
+              <p-chip *ngFor="let language of languages" [label]="language" class="small-chip"></p-chip>
+            </div>
+            
+            <h4>Frameworks/Libraries</h4>
+            <div>
+              <p-chip *ngFor="let framework of frameworks" [label]="framework" class="small-chip"></p-chip>
+            </div>
+            
+            <h4>Development Tools</h4>
+            <div>
+              <p-chip *ngFor="let tool of devTools" [label]="tool" class="small-chip"></p-chip>
+            </div>
+            
+            <h4>Others</h4>
+            <div>
+              <p-chip *ngFor="let other of others" [label]="other" class="small-chip"></p-chip>
+            </div>
+            
+        </div>
+    </div>
+</section>

@@ -1,0 +1,24 @@
+/* The progress container (grey background) */
+.progress-container {
+    width: 100%;
+    height: 4px;
+    background: #ccc;
+  }
+  
+  /* The progress bar (scroll indicator) */
+  .progress-bar {
+    height: 4px;
+    background: var(--first-color);
+    width: 0%;
+  }
+
+  /* Add styles for the hidden navbar */
+.hide-nav {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+}
+
+/* Optionally add a margin-top to your content so it doesn't start behind the fixed navbar */
+.content {
+    margin-top: 80px; /* Adjust the value based on your navbar height */
+}

@@ -1,0 +1,52 @@
+<!-- firstname,lastnamane,email,phone,i am not robo, -->
+<section class="contact section" id="contact">
+    <h2 class="section-title">Contact</h2>
+    <div class="contact__container bd-grid">
+
+        <div class="grid grid-nogutter surface-section text-800">
+            <div class="col-12 md:col-7 p-6">
+                <section>
+                    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                        <div class="grid grid-nogutter surface-section text-800">
+                            <div class="col-12 md:col-6 p-1 mb-4">
+                                <span class="p-float-label">
+                                    <input pInputText id="firstName" formControlName="firstName"style="width: 100%;" />
+                                    <label for="firstName">First Name</label>
+                                </span>
+                            </div>
+                            <div class="col-12 md:col-6 p-1 mb-4">
+                                <span class="p-float-label">
+                                    <input pInputText id="lastName" formControlName="lastName" style="width: 100%;" />
+                                    <label for="lastName">Last Name</label>
+                                </span>
+                            </div>
+                            <div class="col-12 md:col-6 p-1 mb-4">
+                                <span class="p-float-label">
+                                    <input pInputText id="email" formControlName="email"style="width: 100%;" />
+                                    <label for="email">Email</label>
+                                </span>
+                            </div>
+                            <div class="col-12 md:col-6 p-1 mb-4">
+                                <span class="p-float-label">
+                                    <input pInputText id="phone" formControlName="phone" style="width: 100%;" />
+                                    <label for="phone">Phone</label>
+                                </span>
+                            </div>
+                            <div class="col-12 md:col-12 p-1">
+                                <span class="p-float-label">
+                                    <textarea id="message" style="width: 100%;" rows="5" pInputTextarea formControlName="message"></textarea>
+                                    <label for="message">Message</label>
+                                </span>
+                            </div>
+                        </div>
+                        <button pButton pRipple label="Send Message" type="submit"
+                            class="mr-3 p-button-raised" [disabled]="contactForm.invalid"></button>
+                    </form>
+                </section>
+            </div>
+            <div class="col-12 md:col-5 p-0">
+                <img src="../../assets/Images/contact.jpg" alt="Image" class="md:ml-auto block md:h-full">
+            </div>
+        </div>
+    </div>
+</section>
